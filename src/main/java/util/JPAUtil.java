@@ -5,17 +5,17 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JPAUtil {
-	private static final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("GestaoEventos");
+    private static final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("GestaoEventos");
 
-	private JPAUtil() {
-	}
+    private JPAUtil() {
+    }
 
-	public static EntityManager getEntityManager() {
-		return EMF.createEntityManager();
-	}
+    public static EntityManager getEntityManager() {
+        return EMF.createEntityManager();
+    }
 
-	public static void closeFactory() {
-		if (EMF.isOpen())
-			EMF.close();
-	}
+    public static void closeFactory() {
+        if (EMF.isOpen())
+            EMF.close();
+    }
 }
